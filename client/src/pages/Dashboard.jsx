@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { arrayMove } from "@dnd-kit/sortable";
 import { FaFontAwesomeFlag } from "react-icons/fa";
 import CreateTicketModal from "../components/CreateTicketModal";
+import { API_URL } from "../config";
 
 function Dashboard() {
   // State for all tickets and the currently dragged ticket ID
@@ -85,7 +86,7 @@ function Dashboard() {
   // Fetch all tickets when component mounts
   useEffect(() => {
     const GetTickets = async () => {
-      const res = await fetch("/tickets");
+      const res = await fetch(`${API_URL}/tickets`);
       const data = await res.json();
       setTickets(data);
     };
@@ -173,7 +174,7 @@ function Dashboard() {
       );
 
       // Save to server
-      await fetch(`/tickets/${ticketId}/status`, {
+      await fetch(`${API_URL}/tickets/${ticketId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -187,7 +188,7 @@ function Dashboard() {
       if (!overTicket) return;
 
       // Save ticket status to server
-      await fetch(`/tickets/${activeId}/status`, {
+      await fetch(`${API_URL}/tickets/${activeId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -199,7 +200,7 @@ function Dashboard() {
 
   //CREATE TICKET
   const createTicket = async (ticketData) => {
-    const res = await fetch("/tickets", {
+    const res = await fetch(`${API_URL}/tickets`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -214,7 +215,7 @@ function Dashboard() {
 
   //UPDATE TICKET
   const updateTicket = async (id, ticketData) => {
-    const res = await fetch(`/tickets/${id}`, {
+    const res = await fetch(`${API_URL}/tickets/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -229,7 +230,7 @@ function Dashboard() {
 
   //Delete Tivket
   const deleteTicket = async (id) => {
-    await fetch(`/tickets/${id}`, {
+    await fetch(`${API_URL}/tickets/${id}`, {
       method: "DELETE",
     });
 
