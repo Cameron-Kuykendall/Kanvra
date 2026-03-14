@@ -1,140 +1,84 @@
 # Kanvra
 
-Kanvra is a modern full-stack web application built with a focus on responsive design, modular architecture, and scalable front-end development. The platform demonstrates how component-driven interfaces and structured client-server communication can create fast, maintainable web applications.
+Kanvra is a full-stack web application built with a modern React frontend and a Node.js/Express backend. The project focuses on modular architecture, scalable API design, and a clean component-driven user interface.
 
-This project highlights my ability to design interactive user interfaces, manage application state, and deploy production-ready web applications using modern JavaScript tooling.
+The frontend is built with **React and Vite**, while the backend provides REST APIs that manage application logic and data. The project demonstrates my ability to design and connect client and server systems while maintaining a clear and organized codebase.
 
 ---
 
-## Features
+# Features
 
-- Responsive React interface
+- Modern React interface
 - Modular component architecture
-- Dynamic client-side rendering
-- Structured page routing
-- Secure API communication
-- Production deployment with modern build tools
+- REST API backend
+- Structured routing for scalable pages
+- Environment-based configuration
+- Separation of frontend and backend services
 
 ---
 
-## Technologies Used
+# Technologies Used
 
-### Frontend
+## Frontend
 - React
-- JavaScript (ES6+)
 - Vite
+- JavaScript (ES6+)
 - CSS
 
-### Backend / Infrastructure
+## Backend
+- Node.js
+- Express
 - REST APIs
-- Environment variables for configuration
 
-### Tools
+## Tools
 - Git
 - GitHub
-- Netlify (deployment)
+- Netlify (frontend deployment)
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
-client
- ├ src
- │  ├ components
- │  ├ pages
- │  ├ App.jsx
- │  └ main.jsx
- │
- ├ public
- └ index.html
+KANVRA
+│
+├ client
+│  ├ public
+│  ├ src
+│  │  ├ assets
+│  │  ├ components
+│  │  ├ pages
+│  │  ├ App.jsx
+│  │  └ main.jsx
+│  │
+│  ├ index.html
+│  ├ package.json
+│  └ vite.config.js
+│
+└ server
+   ├ config
+   ├ controllers
+   ├ models
+   ├ routes
+   ├ server.js
+   └ package.json
 ```
 
-This structure separates reusable components from page-level views to keep the codebase organized and scalable.
 
----
+# What I Learned
 
-## Running the Project Locally
+Developing Kanvra strengthened my understanding of:
 
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/kanvra.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd client
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-The application will be available at:
-
-```
-http://localhost:5173
-```
-
----
-
-## Production Build
-
-To build the project for production:
-
-```bash
-npm run build
-```
-
-The optimized build will be generated in the `dist` folder.
-
----
-
-## Deployment
-
-This project is deployed using **Netlify**.  
-Netlify builds the project using:
-
-```
-npm run build
-```
-
-and serves the application from the `dist` directory.
-
----
-
-## What I Learned
-
-Building Kanvra strengthened my understanding of:
-
-- Component-driven development with React
-- Structuring scalable front-end applications
-- Managing state across multiple views
-- Debugging production build issues
+- React component architecture
+- Client-server communication
+- REST API design
+- Full-stack application structure
+- Debugging production builds
 - Deploying modern JavaScript applications
 
 ---
 
-## Future Improvements
-
-- UI animations and transitions
-- Expanded dashboard functionality
-- Additional API integrations
-- Performance optimizations
-
----
-
-## Author
+# Author
 
 **Cameron Kuykendall**  
 Computer Science Student & Developer
