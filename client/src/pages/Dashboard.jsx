@@ -1,6 +1,7 @@
 import Column from "../components/Column";
 import Header from "../components/Header";
 import DashHeader from "../components/DashHeader";
+import WaitForServerModal from "./components/WaitForServerModal";
 import { DndContext, PointerSensor, useSensor, useSensors, DragOverlay } from "@dnd-kit/core";
 import { useEffect, useState } from "react";
 import { arrayMove } from "@dnd-kit/sortable";
@@ -239,6 +240,7 @@ function Dashboard() {
 
   return (
     <div className="dash-root">
+      <WaitForServerModal />
       <Header setShowModal={setShowModal} setSelectedTicket={setSelectedTicket} tickets={filteredTickets} />{" "}
       <DashHeader tickets={tickets} filters={filters} setFilters={setFilters} />
       {/* DndContext: Wraps all drag-and-drop enabled elements and manages all drag/drop events */}
