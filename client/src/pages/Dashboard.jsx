@@ -1,7 +1,7 @@
 import Column from "../components/Column";
 import Header from "../components/Header";
 import DashHeader from "../components/DashHeader";
-import WaitForServerModal from "./components/WaitForServerModal";
+import WaitForServerModal from "../components/WaitForServerModal";
 import { DndContext, PointerSensor, useSensor, useSensors, DragOverlay } from "@dnd-kit/core";
 import { useEffect, useState } from "react";
 import { arrayMove } from "@dnd-kit/sortable";
